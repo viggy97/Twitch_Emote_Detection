@@ -97,7 +97,7 @@ def TWITCH_MODEL(input_shape, word_to_vec_map, word_to_index):
 
     X = LSTM(128, return_sequences=True)(embeddings)
 
-    X = Dropout(0.5)(X)
+    X = Dropout(0.3)(X)
     X = LSTM(128, return_sequences=False)(X)
     X = Dropout(0.5)(X)
     X = Dense(3)(X)
